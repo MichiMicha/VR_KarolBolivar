@@ -3,7 +3,27 @@ guid: 7b155678d2ac00443ba52a9b4b2b3a06
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Luna_body
+    second: {fileID: 2800000, guid: a911a7aea15796b47a79147ba46f98ac, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Luna_head
+    second: {fileID: 2800000, guid: 1c3f3e2750bbbe246aa8c1827a1feb6a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wings
+    second: {fileID: 2800000, guid: 476fcbc2d09395d40836c23416e243cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: hair_luna
+    second: {fileID: 2800000, guid: b0f65629469405547a50a262096b274e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

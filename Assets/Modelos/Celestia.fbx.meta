@@ -3,7 +3,22 @@ guid: 667d4491453034a40b935b96922c410b
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Body (2)
+    second: {fileID: 2800000, guid: ce956ccfa2f12734c89ddc127596d2c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2800000, guid: 0ba57d9f91e62eb42b4ff9edfcde7ac0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Jewelry
+    second: {fileID: 2800000, guid: e6f878264dc4df04ab949f08e61e84d3, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
