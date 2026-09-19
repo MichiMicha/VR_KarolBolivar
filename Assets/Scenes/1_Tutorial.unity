@@ -449,7 +449,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168762180}
   m_LocalRotation: {x: -0, y: -0.8927825, z: -0, w: -0.45048806}
-  m_LocalPosition: {x: 0, y: 0, z: 2.0154302}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5025588}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -458,7 +458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.3528981, y: 2.5368583}
+  m_AnchoredPosition: {x: 1.3402542, y: 2.92}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168762182
@@ -830,10 +830,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PanelInstrucciones
   textoInstruccion: {fileID: 511029715}
   pasos:
-  - "\xA1Bienvenido! Mueve la cabeza para ver a tus alrededores. Mira el c\xEDrculo
-    dorado del suelo hasta que se llene el anillo para teletransportarte."
-  - "\xA1Muy bien! Ahora mira el elemento de la armon\xEDa sobre el pilar para recogerlo."
-  - "\xA1Lo tienes! Teletransp\xF3rtate hacia Celestia y m\xEDrala para entreg\xE1rselo."
+  - "\xA1Bienvenido! Mueve la cabeza para ver a tus alrededores, para moverte, mira
+    el c\xEDrculo del suelo, para recoger el elemento sobre el pilar, m\xEDralo."
+  - "Mira el elemento de la armon\xEDa sobre el pilar para recogerlo."
+  - "Ve hacia Celestia y m\xEDrala para entreg\xE1rselo."
   - "\xA1Tutorial completado!"
 --- !u!4 &457225355
 Transform:
@@ -1056,8 +1056,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: ab722bd4ce5ea3440a1ed692422539ef, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1114,8 +1114,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8eb5a1ca9dc0674e9f7cbebbd02710e, type: 2}
+  m_sharedMaterial: {fileID: 2761599703661832449, guid: b8eb5a1ca9dc0674e9f7cbebbd02710e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1201,8 +1201,8 @@ RectTransform:
   m_GameObject: {fileID: 511029714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 501526596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1447,15 +1447,12 @@ MonoBehaviour:
   globoDialogo: {fileID: 168762180}
   textoDialogo: {fileID: 1789197583}
   segundosPorMensaje: 4
-  mensajeFaltan: "Todav\xEDa te faltan {0} elementos de la armon\xEDa. \xA1Sigue
-    buscando!"
+  mensajeFaltan: "Todav\xEDa no tienes el elemento de la armon\xEDa, b\xFAscalo sobre
+    el pilar del pasillo."
   mensajesEntrega:
-  - "Todav\xEDa no tienes el elemento de la armon\xEDa. B\xFAscalo sobre el pilar
-    del pasillo."
-  - "\xA1Gracias! Ya sabes c\xF3mo funciona todo, ahora te espera la sala del trono.
-    \xA1Mucha suerte!"
+  - "\xA1Gracias! \xA1Ve a la sala del trono, mucha suerte!"
   mensajeDespuesDeEntrega: "\xA1Ve a la sala del trono!"
-  sonidoEntrega: {fileID: 0}
+  sonidoEntrega: {fileID: 8300000, guid: 57a5a779a326788498c0d76b127f4d3d, type: 3}
   alEntregar:
     m_PersistentCalls:
       m_Calls:
@@ -2613,15 +2610,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8eb5a1ca9dc0674e9f7cbebbd02710e, type: 2}
+  m_sharedMaterial: {fileID: 2761599703661832449, guid: b8eb5a1ca9dc0674e9f7cbebbd02710e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284681862
-  m_fontColor: {r: 0.5245282, g: 0.054432113, b: 0.38782132, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2638,12 +2635,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 20
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

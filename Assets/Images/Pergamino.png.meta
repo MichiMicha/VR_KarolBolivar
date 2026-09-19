@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ee4a6614b53dd464897497dca6294769
+guid: eee90cb1dfc05404fbce3d38c9f2a64e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4789034600102571810
-    second: MagicPortal1_0
+      213: 3854360210939188913
+    second: Pergamino_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MagicPortal1_0
+      name: Pergamino_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 947
-        height: 843
+        width: 444
+        height: 562
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed0d4d3976ee98db0800000000000000
-      internalID: -4789034600102571810
+      spriteID: 1b61e69c0307d7530800000000000000
+      internalID: 3854360210939188913
       vertices: []
       indices: 
       edges: []

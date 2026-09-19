@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ee4a6614b53dd464897497dca6294769
+guid: ab722bd4ce5ea3440a1ed692422539ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4789034600102571810
-    second: MagicPortal1_0
+      213: -56161649943991785
+    second: Globo de texto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 150, y: 68, z: 150, w: 73}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MagicPortal1_0
+      name: Globo de texto
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 947
-        height: 843
+        x: 143
+        y: 67
+        width: 375
+        height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed0d4d3976ee98db0800000000000000
-      internalID: -4789034600102571810
+      spriteID: 71aa615e649783ff0800000000000000
+      internalID: -56161649943991785
       vertices: []
       indices: 
       edges: []
@@ -138,8 +138,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    spriteID: 6320cda896f79c444a19805b11a28c4a
+    internalID: 1637975314
     vertices: []
     indices: 
     edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Globo de texto: -56161649943991785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
