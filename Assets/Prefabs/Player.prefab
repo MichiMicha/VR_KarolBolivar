@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 7166308338760600286}
   - component: {fileID: 524153908505012525}
   - component: {fileID: 1848537119293412199}
+  - component: {fileID: 6377518184393294794}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -291,6 +292,19 @@ MonoBehaviour:
   verticalSpeed: 0.5
   rotationX: 0
   rotationY: 0
+--- !u!114 &6377518184393294794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196494274163604755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1965652e364cd9244b4b082eabc7e145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportManager
+  Player: {fileID: 5196494274163604755}
 --- !u!1 &5448720742514052012
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +457,6 @@ GameObject:
   - component: {fileID: 9009024858839951041}
   - component: {fileID: 5177624659208113732}
   - component: {fileID: 5642050823723010034}
-  - component: {fileID: 4867820383075621827}
   - component: {fileID: 5907603220083561038}
   - component: {fileID: 283625962878011698}
   m_Layer: 0
@@ -462,7 +475,7 @@ Transform:
   m_GameObject: {fileID: 8877217552189289374}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -554,18 +567,6 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
---- !u!114 &4867820383075621827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8877217552189289374}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aebfb4b86b2e54606894da54f755db2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5907603220083561038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,4 +626,6 @@ MonoBehaviour:
   pointer: {fileID: 2076555191474651242}
   maxDistancePointer: 4.5
   disPointerObject: 0.95
+  _maxDistance: 30
+  scaleSize: 0.05
   hitPoint: {x: 0, y: 0, z: 0}
