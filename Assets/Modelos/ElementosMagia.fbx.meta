@@ -3,7 +3,12 @@ guid: a0a35f3f4855d2e41ad2f35ff6f41ed9
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Magic
+    second: {fileID: 2800000, guid: a12a0382570be3c4bb7e33148bbfbe50, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

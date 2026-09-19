@@ -1,0 +1,118 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using TMPro;
+
+/// <summary>
+/// Va en Celestia. En el MISMO GameObject necesitas: un Collider (BoxCollider) y el Tag "Interactable".
+/// - Si el jugador la mira y todavía no tiene todos los elementos: dice cuántos faltan.
+/// - Si ya los tiene: los recibe, dice sus frases, dispara el evento "Al Entregar"
+///   y (opcional) carga la siguiente escena después de unos segundos.
+/// </summary>
+public class CelestiaNPC : MonoBehaviour
+{
+    [Header("Globo de diálogo")]
+    [Tooltip("El Canvas (World Space) que contiene el texto. Debe ser hijo de Celestia, NO ser Celestia.")]
+    public GameObject globoDialogo;
+    public TMP_Text textoDialogo;
+    public float segundosPorMensaje = 4f;
+
+    [Header("Frases")]
+    [Tooltip("{0} se reemplaza por cuántos elementos faltan")]
+    [TextArea] public string mensajeFaltan = "Todavía te faltan {0} elementos de la armonía. ¡Sigue buscando!";
+    [TextArea] public string[] mensajesEntrega;
+    [TextArea] public string mensajeDespuesDeEntrega = "Gracias por tu ayuda.";
+
+    [Header("Audio (opcional)")]
+    public AudioClip sonidoEntrega;
+
+    [Header("Al recibir los elementos")]
+    [Tooltip("Ej.: PuertaSalida.Desbloquear, PanelInstrucciones.IrAlPaso")]
+    public UnityEvent alEntregar;
+
+    public bool cambiarEscenaAlEntregar = false;
+    [Tooltip("Número de escena en Build Profiles / Build Settings")]
+    public int escenaSiguiente = 2;
+    [Tooltip("Tiempo para que alcance a leer todas sus frases antes de cambiar")]
+    public float segundosAntesDeCambiar = 8f;
+
+    private bool entregado;
+    private Coroutine rutinaDialogo;
+
+    void Start()
+    {
+        if (globoDialogo != null) globoDialogo.SetActive(false);
+    }
+
+    // Lo llama CameraPointerManager (mediante SendMessage)
+    public void OnPointerClickXR()
+    {
+        if (entregado)
+        {
+            Decir(mensajeDespuesDeEntrega);
+            return;
+        }
+
+        ElementosManager manager = ElementosManager.Instance;
+        if (manager == null)
+        {
+            Debug.LogWarning("Falta un ElementosManager en la escena.");
+            return;
+        }
+
+        if (!manager.TieneTodos)
+        {
+            Decir(string.Format(mensajeFaltan, manager.Faltan));
+            return;
+        }
+
+        Entregar();
+    }
+
+    private void Entregar()
+    {
+        entregado = true;
+
+        if (sonidoEntrega != null)
+        {
+            AudioSource.PlayClipAtPoint(sonidoEntrega, transform.position);
+        }
+
+        Decir(mensajesEntrega);
+        alEntregar?.Invoke();
+
+        if (cambiarEscenaAlEntregar)
+        {
+            Invoke(nameof(CambiarEscena), segundosAntesDeCambiar);
+        }
+    }
+
+    private void CambiarEscena()
+    {
+        SceneManager.LoadScene(escenaSiguiente);
+    }
+
+    private void Decir(params string[] mensajes)
+    {
+        if (globoDialogo == null || textoDialogo == null) return;
+        if (mensajes == null || mensajes.Length == 0) return;
+
+        if (rutinaDialogo != null) StopCoroutine(rutinaDialogo);
+        rutinaDialogo = StartCoroutine(MostrarMensajes(mensajes));
+    }
+
+    private IEnumerator MostrarMensajes(string[] mensajes)
+    {
+        globoDialogo.SetActive(true);
+
+        foreach (string mensaje in mensajes)
+        {
+            textoDialogo.text = mensaje;
+            yield return new WaitForSeconds(segundosPorMensaje);
+        }
+
+        globoDialogo.SetActive(false);
+        rutinaDialogo = null;
+    }
+}

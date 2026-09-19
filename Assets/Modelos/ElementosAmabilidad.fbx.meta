@@ -3,7 +3,12 @@ guid: b1dedb5f1a129f84e98a3e639cbca595
 ModelImporter:
   serializedVersion: 24300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kindness
+    second: {fileID: 2800000, guid: 1bf833d0cd3a86544a13aed040a925d3, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
