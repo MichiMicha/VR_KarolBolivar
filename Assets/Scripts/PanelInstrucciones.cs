@@ -1,14 +1,12 @@
 using UnityEngine;
 using TMPro;
 
-// Celestia luego de estar 1000 años gobernando y cansada de todo be like: *No hace nada *
+// Celestia luego de estar 1000 años gobernando y cansada de todo be like: *No hace nada*
 
 public class PanelInstrucciones : MonoBehaviour
 {
     public TMP_Text textoInstruccion;
-
-    [Tooltip("Un texto por paso. El paso 0 se muestra al empezar la escena.")]
-    [TextArea(2, 5)] public string[] pasos;
+    public string[] pasos;
 
     private int pasoActual = -1;
 

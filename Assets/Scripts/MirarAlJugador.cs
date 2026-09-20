@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class MirarAlJugador : MonoBehaviour
 {
-    [Tooltip("Si está activo, solo gira de izquierda a derecha (no se inclina hacia arriba/abajo)")]
     public bool soloEjeY = true;
 
     private Transform camara;

@@ -6,29 +6,19 @@ using TMPro;
 
 public class CelestiaNPC : MonoBehaviour
 {
-    [Header("Globo de diálogo")]
-    [Tooltip("El Canvas (World Space) que contiene el texto. Debe ser hijo de Celestia, NO ser Celestia.")]
     public GameObject globoDialogo;
     public TMP_Text textoDialogo;
     public float segundosPorMensaje = 4f;
-
-    [Header("Frases")]
-    [Tooltip("{0} se reemplaza por cuántos elementos faltan")]
-    [TextArea] public string mensajeFaltan = "Todavía te faltan {0} elementos de la armonía. ¡Sigue buscando!";
-    [TextArea] public string[] mensajesEntrega;
-    [TextArea] public string mensajeDespuesDeEntrega = "Gracias por tu ayuda.";
-
-    [Header("Audio (opcional)")]
+    public string mensajeFaltan = "Todavía te faltan {0} elementos de la armonía. ¡Sigue buscando!";
+    public string[] mensajesEntrega;
+    public string mensajeDespuesDeEntrega = "Gracias por tu ayuda.";
     public AudioClip sonidoEntrega;
-
-    [Header("Al recibir los elementos")]
-    [Tooltip("Ej.: PuertaSalida.Desbloquear, PanelInstrucciones.IrAlPaso")]
     public UnityEvent alEntregar;
 
     public bool cambiarEscenaAlEntregar = false;
-    [Tooltip("Número de escena en Build Profiles / Build Settings")]
+
     public int escenaSiguiente = 2;
-    [Tooltip("Tiempo para que alcance a leer todas sus frases antes de cambiar")]
+
     public float segundosAntesDeCambiar = 8f;
 
     private bool entregado;

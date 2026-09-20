@@ -3,19 +3,14 @@ using UnityEngine;
 // Vivan las burras de colores que te enseñan sobre la amistad.
 public class ElementoArmonia : MonoBehaviour
 {
-    [Header("Sonido (opcional)")]
     public AudioClip sonidoRecolectar;
 
-    [Header("Animación (pon 0 para desactivar)")]
-    [Tooltip("Grados por segundo que gira sobre sí mismo")]
     public float velocidadGiro = 40f;
 
-    [Tooltip("Cuántos metros sube y baja flotando")]
     public float alturaFlotar = 0.05f;
 
     public float velocidadFlotar = 1.5f;
 
-    [Tooltip("Cuánto crece cuando el jugador lo mira (1 = no cambia)")]
     public float escalaAlMirar = 1.15f;
 
     private bool recolectado;
