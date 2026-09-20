@@ -2,13 +2,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
-/// <summary>
-/// Lleva la cuenta de los elementos de la armonía recolectados en ESTA escena.
-/// Pon UN solo ElementosManager por escena (en un GameObject vacío llamado "ElementosManager").
-///
-/// Tutorial:         Total Requerido = 1, Elementos Iniciales = 0
-/// Sala del trono:   Total Requerido = 6, Elementos Iniciales = 1  (el 1 viene del tutorial)
-/// </summary>
 public class ElementosManager : MonoBehaviour
 {
     public static ElementosManager Instance;
@@ -61,8 +54,6 @@ public class ElementosManager : MonoBehaviour
     {
         ActualizarTexto();
     }
-
-    /// <summary>La llama ElementoArmonia cuando el jugador recoge uno.</summary>
     public void RegistrarElemento()
     {
         Recolectados++;
@@ -84,3 +75,5 @@ public class ElementosManager : MonoBehaviour
         }
     }
 }
+
+// Apoco si muy amistoso

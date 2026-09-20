@@ -1,11 +1,6 @@
 using UnityEngine;
 
-/// <summary>
-/// Va en cada elemento de la armonía que está sobre un pilar.
-/// En el MISMO GameObject necesitas: un Collider (BoxCollider) y el Tag "Interactable".
-/// Cuando el jugador lo mira 2.5 s (o toca el botón del Cardboard) se recoge,
-/// desaparece del pilar y suma 1 al ElementosManager.
-/// </summary>
+// Vivan las burras de colores que te enseñan sobre la amistad.
 public class ElementoArmonia : MonoBehaviour
 {
     [Header("Sonido (opcional)")]
@@ -52,8 +47,6 @@ public class ElementoArmonia : MonoBehaviour
         transform.localScale = Vector3.Lerp(transform.localScale, escalaObjetivo, Time.deltaTime * 8f);
     }
 
-    // ---- Métodos que llama CameraPointerManager (mediante SendMessage) ----
-
     public void OnPointerEnterXR()
     {
         mirando = true;
@@ -83,7 +76,6 @@ public class ElementoArmonia : MonoBehaviour
             Debug.LogWarning("Falta un ElementosManager en la escena.");
         }
 
-        // Se desactiva (NO se destruye): CameraPointerManager sigue guardando una referencia a este objeto.
         gameObject.SetActive(false);
     }
 }

@@ -1,14 +1,8 @@
 using UnityEngine;
 using TMPro;
 
-/// <summary>
-/// Muestra un texto de instrucciones que cambia por pasos.
-/// Sirve para el tutorial y también para la sala del trono.
-/// Los pasos avanzan llamando a IrAlPaso(n) desde eventos del Inspector
-/// (TeleportPoint.OnTeleport, ElementosManager.OnElementoRecolectado, CelestiaNPC.alEntregar...).
-/// Solo avanza, nunca retrocede: si un evento se repite (por ejemplo, teletransportarse varias veces)
-/// no se rompe el orden.
-/// </summary>
+// Celestia luego de estar 1000 años gobernando y cansada de todo be like: *No hace nada *
+
 public class PanelInstrucciones : MonoBehaviour
 {
     public TMP_Text textoInstruccion;

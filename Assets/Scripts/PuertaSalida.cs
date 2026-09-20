@@ -1,12 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Va en la puerta de la sala del trono. En el MISMO GameObject necesitas:
-/// un Collider (BoxCollider) y el Tag "Interactable".
-/// Empieza bloqueada; CelestiaNPC la desbloquea (evento "Al Entregar" -> PuertaSalida.Desbloquear).
-/// Cuando está desbloqueada y el jugador la mira, carga la escena final.
-/// </summary>
+// *Comentario creativo sobre ponys*
+
 public class PuertaSalida : MonoBehaviour
 {
     [Header("Destino")]
@@ -33,7 +29,6 @@ public class PuertaSalida : MonoBehaviour
         if (efectoDesbloqueo != null) efectoDesbloqueo.SetActive(desbloqueada);
     }
 
-    /// <summary>Se llama desde el evento de CelestiaNPC.</summary>
     public void Desbloquear()
     {
         desbloqueada = true;
@@ -47,7 +42,6 @@ public class PuertaSalida : MonoBehaviour
         }
     }
 
-    // Lo llama CameraPointerManager (mediante SendMessage)
     public void OnPointerClickXR()
     {
         if (!desbloqueada)

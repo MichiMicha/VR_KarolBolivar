@@ -4,12 +4,6 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-/// <summary>
-/// Va en Celestia. En el MISMO GameObject necesitas: un Collider (BoxCollider) y el Tag "Interactable".
-/// - Si el jugador la mira y todavía no tiene todos los elementos: dice cuántos faltan.
-/// - Si ya los tiene: los recibe, dice sus frases, dispara el evento "Al Entregar"
-///   y (opcional) carga la siguiente escena después de unos segundos.
-/// </summary>
 public class CelestiaNPC : MonoBehaviour
 {
     [Header("Globo de diálogo")]
@@ -45,7 +39,7 @@ public class CelestiaNPC : MonoBehaviour
         if (globoDialogo != null) globoDialogo.SetActive(false);
     }
 
-    // Lo llama CameraPointerManager (mediante SendMessage)
+    // El pointer lo llama cvfjvnf
     public void OnPointerClickXR()
     {
         if (entregado)
