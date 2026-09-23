@@ -1386,7 +1386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -225.3, y: -964.3}
+  m_AnchoredPosition: {x: -225.3, y: -1072.06}
   m_SizeDelta: {x: 100, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697649014
@@ -1741,7 +1741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.04, y: 1.23}
+  m_AnchoredPosition: {x: -0.04, y: 1.54}
   m_SizeDelta: {x: 1000, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &824724695
@@ -3891,8 +3891,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.58, y: 1.66, z: 1.04}
-  m_Center: {x: 0, y: 1, z: 0.08}
+  m_Size: {x: 0.83, y: 1.68, z: 1.04}
+  m_Center: {x: 0.06, y: 1, z: 0.08}
 --- !u!1001 &2034420362
 PrefabInstance:
   m_ObjectHideFlags: 0
