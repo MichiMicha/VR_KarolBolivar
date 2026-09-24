@@ -893,7 +893,7 @@ MonoBehaviour:
     fucsia del suelo."
   - "Mira el elemento de la armon\xEDa sobre el pilar para recogerlo."
   - "Ve hacia Celestia y m\xEDrala para entreg\xE1rselo."
-  - "\xA1Tutorial completado!"
+  - "\xA1Tutorial completado! Ve a la sala del trono."
 --- !u!4 &457225355
 Transform:
   m_ObjectHideFlags: 0
